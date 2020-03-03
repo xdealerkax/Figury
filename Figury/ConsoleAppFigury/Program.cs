@@ -12,7 +12,7 @@ namespace ConsoleAppFigury
         static void Main(string[] args)
         {
             Trojkat t1; // deklaracja zmiennej typu Trojkat
-            t1 = new Trojkat(); //tworzenie obeiktu (new)
+            t1 = new Trojkat(); //tworzenie obiektu (new)
 
            // Trojkat t2 = new Trojkat(1, 2, 3); // długości boków , a =1
            // var t3 = new Trojkat(c: 1, b: 2, a: 2); // utworz zmienna t3 typu trojkat var jest deklaracja ze używasz zmiennej
@@ -37,12 +37,14 @@ namespace ConsoleAppFigury
 
             //t1.a = 5; // wyświetli NaN not number
 
-            Console.WriteLine(t1);
+            Console.WriteLine(t1);  
             Console.WriteLine(t1.Pole);
             Console.WriteLine("========================");
-            var t2 = new Trojkat(-1, 2, 1);
+            var t2 = new Trojkat(3, 4, 5);
             Console.WriteLine(t2);
-            Console.WriteLine(t2.A);
+           // Console.WriteLine(t2.A);
+            Console.WriteLine(t2.Pole);
+           
 
             //Console.WriteLine(t2);
             //Console.WriteLine(t3);
