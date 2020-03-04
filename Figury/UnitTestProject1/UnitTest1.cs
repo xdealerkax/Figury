@@ -74,15 +74,17 @@ namespace UnitTestProject1
             var t = new Trojkat(a, b, c);
 
             //Assert
-            Assert.AreEqual(wynik, t.Obwod); // oczekujemy że będzie wynik a otrzymujemy obwod t Czy jest to równe
+            Assert.AreEqual(wynik, t.Obwod, 0.01); // oczekujemy że będzie wynik a otrzymujemy obwod t Czy jest to równe
+            // z jaką dokładnością porównujemy, 0.01 do dwoch miejsc po przecinku
         }
 
         [DataTestMethod]
         [DataRow(3,4,5,6)]
+        [DataRow(1, 1 ,1, 0.433012701892219)]
         public void PropertyPole_Poprawnie(double a, double b, double c, double wynik)
         { 
-              var t  = new Trojkat(a , b , c);
-            Assert.AreEqual(wynik, t.Pole);
+             var t  = new Trojkat(a , b , c);
+            Assert.AreEqual(wynik, t.Pole, 0.01);
 
         }
 
