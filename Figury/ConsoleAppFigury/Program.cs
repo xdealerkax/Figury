@@ -11,15 +11,15 @@ namespace ConsoleAppFigury
     {
         static void Main()
         {
-            var t = new triangle();
-            console.writeline(t);
-            console.writeline(t.color);
-            t.print(); // polimorfizm
+            var t = new Triangle();
+            Console.WriteLine(t);
+            Console.WriteLine(t.Color);
+            t.Print(); // polimorfizm
 
-            var s = new sphere(10);
-            console.writeline(s);
-            console.writeline(s.surface);
-            console.writeline(s.perimeter);
+            var s = new Sphere(10);
+            Console.WriteLine(s);
+            Console.WriteLine(s.Surface);
+            Console.WriteLine(s.Perimeter);
             var t1 = new Triangle();
             Console.WriteLine(t1);
             Console.WriteLine(t1.Surface);
