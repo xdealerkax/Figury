@@ -11,15 +11,19 @@ namespace ConsoleAppFigury
     {
         static void Main()
         {
-            var t = new Triangle();
-            Console.WriteLine(t);
-            Console.WriteLine(t.Color);
-            t.Print(); // polimorfizm
+            var t = new triangle();
+            console.writeline(t);
+            console.writeline(t.color);
+            t.print(); // polimorfizm
 
-            var s = new Sphere(10);
-            Console.WriteLine(s);
-            Console.WriteLine(s.Surface);
-            Console.WriteLine(s.Perimeter);
+            var s = new sphere(10);
+            console.writeline(s);
+            console.writeline(s.surface);
+            console.writeline(s.perimeter);
+            var t1 = new Triangle();
+            Console.WriteLine(t1);
+            Console.WriteLine(t1.Surface);
+
         }
 
         static void Main2()
@@ -29,6 +33,7 @@ namespace ConsoleAppFigury
 
             var t1 = new Triangle(1.5, 1, 1);
             Console.WriteLine(t1);
+            
 
             // var t2 = new Triangle(3); // pozostałe boki równe 1 
             // Console.WriteLine(t2);
