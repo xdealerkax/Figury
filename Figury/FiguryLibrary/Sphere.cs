@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FiguryLibrary
 {
-    public class Sphere : Circle // dziedziczy się wszystko oprócz konstruktora
+    public class Sphere : Circle,IMeasurable2D // w circle dziedziczy się wszystko oprócz konstruktora
     {
         public Sphere(double r = 1) : base(r) //odwołanie do konstruktora(z klasy nadrzędnej) z cicrle używamy R z niego który był w private set
         {

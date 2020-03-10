@@ -8,7 +8,7 @@ namespace FiguryLibrary
     /// Trójkąt w wersji immutable(niezmiennicza) , stan obiektu nigdy nie ulegnie zmianie
     /// </summary>
 
-    public class Triangle : Figure
+    public class Triangle : Figure, IMeasurable2D
     {
         public double A { get; private set; } // public a private set A jest read only Można tylko czytać A
         public double B { get; private set; }
@@ -33,6 +33,16 @@ namespace FiguryLibrary
         }
 
         public double Perimeter => A + B + C;  // obwód
+
+        public double Surface
+        {
+            get 
+            {
+                var p = 0.5 * Perimeter;
+                var s = Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+                return s;
+            }
+        }
 
         public Triangle Scale(double factor) //nie możemy skalować bo obiekt niezmienniczy // produkuje nowy obiekt factor współczynik np 2 (daj mi trójkąt dwa razy większy)
         {                                   // zwraca nam wartość 

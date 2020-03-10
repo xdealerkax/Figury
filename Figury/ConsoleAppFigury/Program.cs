@@ -19,7 +19,41 @@ namespace ConsoleAppFigury
             var s = new Sphere(10);
             Console.WriteLine(s);
             Console.WriteLine(s.Surface);
-            Console.WriteLine(s.Perimeter);
+            //Console.WriteLine(s.Perimeter);
+
+            var c = new Circle(1);
+            var t1 = new Triangle(3, 4, 5);
+            var s1 = new Sphere(2);
+
+            // Lista figur to tablica która nie ma końca
+            List<Figure> lista; // w <> typ generyczny piszemy czego to jest kolekcja 
+            lista = new List<Figure>(); // utworzenie obiektu typu lista
+            lista.Add(t);
+            lista.Add(s);
+            lista.Add(c);
+            lista.Add(t1);
+            lista.Add(s1);
+            lista.Add(new Circle(4)); //dostep do niego tylko z listy
+
+            foreach (var f in lista)
+            {
+                Console.WriteLine(f); // wypisz figure f
+            }
+
+            Console.WriteLine("=====================");
+            var total = 0.0;
+            foreach ( var f in lista )
+            {
+                if (f is IMeasurable2D)  // operator is czy f jest typu imeasu..
+                {
+                    total += ((IMeasurable2D)f).Surface; // rzutowanie f na imeasu..
+                    Console.WriteLine(f);
+                }
+                   
+
+            }
+            Console.WriteLine($"Sumaryczne pole = {total}");
+
         }
 
         static void Main2()

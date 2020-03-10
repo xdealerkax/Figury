@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FiguryLibrary
 {
-    public class Circle : Figure
+    public class Circle : Figure, IMeasurable1D,IMeasurable2D // i implementuje z imeassurable2D
     {
         public double R { get; private set; }
 
@@ -17,6 +17,8 @@ namespace FiguryLibrary
         public virtual double Perimeter => 2 * Math.PI * R;  // obwód tylko w klasie kółka dla innych klas zły jest dla nich nieodpowiedni
 
         public virtual double Surface => Math.PI * R * R;
+
+        public double Length => Perimeter; // pytasz o długość odsyłam cię do perimeter
 
         public override string ToString()
         {
