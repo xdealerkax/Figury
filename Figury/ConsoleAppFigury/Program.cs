@@ -19,6 +19,7 @@ namespace ConsoleAppFigury
             var s = new Sphere(10);
             Console.WriteLine(s);
             Console.WriteLine(s.Surface);
+<<<<<<< HEAD
             //Console.WriteLine(s.Perimeter);
 
             var c = new Circle(1);
@@ -53,6 +54,12 @@ namespace ConsoleAppFigury
 
             }
             Console.WriteLine($"Sumaryczne pole = {total}");
+=======
+            Console.WriteLine(s.Perimeter);
+            var t1 = new Triangle();
+            Console.WriteLine(t1);
+            Console.WriteLine(t1.Surface);
+>>>>>>> 0a2d6fa7fa388f0d552f42e3e5778493a2e79bc1
 
         }
 
@@ -63,6 +70,7 @@ namespace ConsoleAppFigury
 
             var t1 = new Triangle(1.5, 1, 1);
             Console.WriteLine(t1);
+            
 
             // var t2 = new Triangle(3); // pozostałe boki równe 1 
             // Console.WriteLine(t2);

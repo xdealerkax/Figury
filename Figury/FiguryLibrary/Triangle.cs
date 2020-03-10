@@ -56,5 +56,16 @@ namespace FiguryLibrary
         {
             Console.WriteLine("rysowanie trojkata");
         }
+
+        public double Surface
+        {
+            get
+            {
+                var p = 0.5 * Perimeter;
+                var s = Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+                return s;
+            }
+        
+        }
     }
 }
